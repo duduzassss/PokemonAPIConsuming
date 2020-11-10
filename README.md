@@ -20,7 +20,7 @@ After installing the packages, we can do the following: `(v-env) C:\your_project
 _________________
 Accessing the web app: `localhost:5000/`
 _________________
-Feito com :blue_heart: por Eduardo Bitencourt.
+Feito com :blue_heart: por Eduardo Bitencourt
 
 
 
