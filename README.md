@@ -16,7 +16,9 @@ With your virtual environment enabled on the command line do: `(v-env) C:\your_p
 _________________
 And type: `pip install -r requirements.txt`
 _________________
-After installing the packages, we can do the following: `(v-env) C:\your_project_folder>python run.py`
+After install requirements do: `(v-env) C:\your_project_folder>python run.py db migrate` and `python run.py db upgrade`
+_________________
+After installing the packages, we can do the following: `(v-env) C:\your_project_folder>python run.py runserver`
 _________________
 Accessing the web app: `localhost:5000/`
 _________________
