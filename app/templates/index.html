@@ -1,52 +1,18 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PokeAPI</title>
+{% extends 'base.html' %}
 
-    <link rel="stylesheet" href="static/css/index.css">
+{% block title %}{{ super() }} - Index {% endblock %}
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="content-body">
+{% block content %}
+    <main>
+        <div class="img-main">
 
-        <header>
-            <div class="left-header">
-                <div class="logo"></div>
-                <div class="name-app">
-                    <p>PokeAPI</p>
-                </div>
-            </div>
-            <div class="right-header">
-                <div class="signup">
-                    <a href="#">Register</a>
-                </div>
-                <div class="signin">
-                    <a href="#">Sign in</a>
-                </div>
-            </div>
-        </header>
+        </div>
+        <div class="info">
+            <p>Learn more about the information of your favorite pokémon! Log in to collect Pokémon</p>
+        </div>
+        <div class="button">
+            <a href="#">Login</a>
+        </div>
 
-        <main>
-            <div class="img-main">
-
-            </div>
-            <div class="info">
-                <p>Learn more about the information of your favorite pokémon! Log in to collect Pokémon</p>
-            </div>
-            <div class="button">
-                <a href="#">Login</a>
-            </div>
-
-        </main>
-
-        <footer>
-            <p>&copy; Developed by Eduardo Bitencourt.</p>
-        </footer>
-    </div>
-</body>
-</html>
+    </main>
+{% endblock %}
