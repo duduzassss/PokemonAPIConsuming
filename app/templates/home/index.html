@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 
 {% block title %}{{ super() }} - Index {% endblock %}
+{% block head %}
+    {{super()}}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
 
 {% block content %}
-    <main>
-        <div class="img-main">
 
-        </div>
+        <div class="img-main"></div>
+        
         <div class="info">
             <p>Learn more about the information of your favorite pokémon! Log in to collect Pokémon</p>
         </div>
@@ -14,5 +17,4 @@
             <a href="#">Login</a>
         </div>
 
-    </main>
 {% endblock %}

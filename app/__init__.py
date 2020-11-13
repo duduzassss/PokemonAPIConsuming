@@ -16,4 +16,5 @@ manager.add_command('db', MigrateCommand)
 # Importando no flask os controllers depois da instancia
 # de app, pq precisamos que ela já esteja declarada, 
 # pois usamos a variável app nos nossos módulos
-from app.controllers import default
+from app.controllers.home import routes
+from app.controllers.auth import routes
