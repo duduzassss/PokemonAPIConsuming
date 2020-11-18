@@ -23,3 +23,4 @@ from app.models import models
 # pois usamos a variável app nos nossos módulos
 from app.controllers.home import routes
 from app.controllers.auth import routes, forms
+from app.controllers.pokemons import routes

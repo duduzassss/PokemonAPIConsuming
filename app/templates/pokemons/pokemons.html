@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ super() }}- Pokémons {% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pokemons/index.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="content-pokemons">
+    {% for pokemon in lista %}
+        <div class="container-pokemon">
+            <img src="{{ pokemon }}" width="150" alt="">
+
+            <h6>Lorem Ipsum</h6>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
