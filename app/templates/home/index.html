@@ -4,17 +4,22 @@
 {% block head %}
     {{super()}}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+
+    
 {% endblock %}
 
 {% block content %}
-
         <div class="img-main"></div>
         
         <div class="info">
             <p>Learn more about the information of your favorite pokémon! Log in to collect Pokémon</p>
         </div>
         <div class="button">
-            <a href="#">Login</a>
+            {% if current_user.is_authenticated %}
+                <a href="{{ url_for('logout') }}">Logout</a>
+            {% else %}
+                <a href="{{ url_for('login') }}">Login</a>
+            {% endif %}
+            <!-- <a href="login">Login</a> -->
         </div>
-
 {% endblock %}

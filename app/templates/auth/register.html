@@ -2,116 +2,11 @@
 
 {% block head %}
     {{ super() }}
-    <style>
-        main { display: block; }
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth/register.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth/inputs.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css')}}">
 
-        .page-name{
-            width: 100%;
-            height: 30%;
-            /* text-align: center; */
-            /* margin: 0; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #5CC8FF;
-            border-radius: 8px 8px 0 0;
-        }
-        .page-name p{
-            font-size: 3rem;
-            font-weight: 300;
-            color: #fff;
-        }
-        form{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            height: 50%;
-            margin: 2rem;
-            
-            
-        }
-        .div-username{
-            margin-bottom: 3.5rem;
-        }
-        .div-username, .div-pass{
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-
-        }
-        .div-username label, .div-pass label{
-            color: #fff;
-            font-weight: 500;
-            margin-right: .4em;
-        }
-        .input-username, .input-pass{
-            background-color: transparent;
-            border-style: none;
-            border-bottom: 1px solid #fff;
-            color: #fff;
-        }
-        .div-pass{
-            /* margin-bottom: ; */
-            margin-bottom: 5vh;
-        }
-        .input-username label{
-            color: #fff;
-        }
-        .input-username:focus, .input-pass:focus{
-            outline: 0;
-            color: #fff;
-        }
-        /* Alter color placeholder */
-        ::-webkit-input-placeholder {
-            color: #fff;
-            font-size: 1rem;
-        }
-
-        :-moz-placeholder { /* Firefox 18- */
-            color: #fff; 
-            font-size: 1rem; 
-        }
-
-        ::-moz-placeholder {  /* Firefox 19+ */
-            color: #fff;  
-            font-size: 1rem;
-        }
-
-        :-ms-input-placeholder {  
-            color: #fff;  
-            font-size: 1rem;
-        }
-        /* Alter background select name autocomplete html */
-        input:-webkit-autofill {
-            -webkit-box-shadow: 0 0 0 30px #10AAE1 inset;
-            -webkit-text-fill-color: #fff;
-        }
-
-        .button{
-            width: 28%;
-            height: 30%;
-
-            border-radius: 8px;
-            border: none;
-            
-
-            background-color: #5CC8FF;
-            color: #fff;
-            font-weight: 300;
-            font-size: 1.2rem;
-            cursor: pointer;
-            box-shadow: 0px 5px 15px rgba(92, 200, 255, 1);
-            transition: all 0.3s ease 0s;
-        }
-        .button:hover {
-            background-color: #2EE59D;
-            box-shadow: 0px 5px 20px rgba(46, 229, 157, 1);
-            color: #fff;
-            transform: translateY(-7px);
-        }
-    </style>
+    
 {% endblock %}
 
 {% block content %}
@@ -120,6 +15,7 @@
     </div>
 
     <form action="" method="POST" autocomplete="off">
+        {{ form.csrf_token }} 
         <div class="div-username">
             {{ form.username(class_="input-username", placeholder="Username",autocomplete="off", autofocus="on") }}
         </div>
@@ -127,8 +23,12 @@
         <div class="div-pass">
             {{ form.password(class_="input-pass", placeholder="Password")}}
         </div>
-        
-        <input type="submit" value="Send me" class="button">
+
+        <input type="submit" value="Send me" class="button" style="width: 100%; padding: 6px;">
     </form>
+
+{% endblock %}
+
+{% block scripts %}
 
 {% endblock %}

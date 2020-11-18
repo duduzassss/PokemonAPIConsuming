@@ -10,10 +10,10 @@ body{
     
 }
 header{
-    width: 100vw;
-    height: 5.6rem;
-    display: inline-flex;
-    align-items: center;
+    width: 100vw !important;
+    height: 5.6rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
 
     border-bottom: 1px solid #fff;
 }
@@ -34,11 +34,11 @@ header{
     align-items: center;
 }
 .name-app a{
-    width: 20%;
-    color: #fff;
-    font-weight: 700;
-    font-size: 2rem;
-    text-decoration: none;
+    width: 20% !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+    font-size: 2rem !important;
+    text-decoration: none !important;
 }
 .right-header{
     width: 100%;
@@ -50,10 +50,10 @@ header{
     margin-right: 2.6rem;
 }
 .signup a, .signin a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.4rem;
-    font-weight: 300;
+    text-decoration: none !important;
+    color: #fff !important;
+    font-size: 1.4rem !important;
+    font-weight: 300 !important;
 }
 .signin{
     margin-right: 1.4rem;
@@ -65,12 +65,12 @@ main{
     border: 1px solid #fff;
     border-radius: 8px;
 
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: auto;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 
@@ -93,4 +93,11 @@ footer p{
     color: #fff;
     font-weight: 300;
 
+}
+
+/* alerts */
+.alert-danger, .alert-success, .alert-warning{
+    margin: 1.5rem auto;
+    width: 50%;
+    text-align: center;
 }

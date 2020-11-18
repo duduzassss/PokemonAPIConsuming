@@ -1,0 +1,175 @@
+header{
+    display: flex !important;
+}
+
+main{
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    flex-direction: row !important;
+    width: 80vw;
+    height: 70vh;
+
+    border: 0;
+    /* margin: 0; */
+    padding: 0;
+    margin-top: 7vh;
+}
+
+
+
+/* Carousel  */
+.carousel-inner{
+    border-radius: 5px 0 0 5px;
+}
+.carousel-inner img {
+    width: 40vw;
+    height: 68vh;
+}
+/*  */
+
+.left{
+    height: 68vh;
+    width: 40vw;
+    
+}
+
+.right{
+    background-color: #fff;
+    border-radius: 0 5px 5px 0;
+    height: 68vh;
+    width: 35vw;
+}
+.login-social{
+    display: flex;
+    justify-content: center;
+
+    margin-top: 1rem;
+
+}
+.login-social i{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.fa-facebook{
+    color: #1094F4;
+    margin-right: 2rem;
+}
+.fa-instagram{
+    color: #1094F4;
+    margin-right: 2rem;
+}
+.fa-twitter{
+    color: #1094F4;
+    margin: 0;
+}
+
+.right p{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+
+    margin-top: .6rem;
+}
+.right hr{
+    width: 25%;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-top: 1.5rem;
+
+}
+form .div-username{
+    margin-bottom: 2rem;
+}
+.div-pass{
+    /* margin-bottom: ; */
+    margin-bottom: 0vh !important;
+}
+
+/*  */
+
+/* inputs */
+.input-username, .input-pass{
+    border-bottom: 1px solid #10AAE1 !important;
+    color: #10AAE1 !important;
+}
+/* Alter color placeholder */
+::-webkit-input-placeholder {
+    color: #a0a0a0 !important;
+    font-size: 1rem !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #a0a0a0 !important;
+    font-size: 1rem !important; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #a0a0a0 !important; 
+    font-size: 1rem !important;
+}
+
+:-ms-input-placeholder {  
+    color: #a0a0a0 !important; 
+    font-size: 1rem !important;
+}
+/* Alter background select name autocomplete html */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #fff inset !important;
+    -webkit-text-fill-color: #10AAE1 !important;
+}
+/*  */
+
+@media only screen and (min-width: 500px) and (max-width: 680px) {
+    .left{
+        display: none;
+    }
+    .right{
+        width: 80vw;
+        height: 62vh;
+        border-radius: 5px;
+    }
+    .right p{
+        margin-top: 0rem;
+    }
+    .right hr{
+        width: 0%;
+    }    
+    .input-username, .input-pass{
+        width: 60%;
+    }
+    .input-username{
+        margin-bottom: 2%;
+    }
+    
+}
+
+@media only screen and (min-width: 680px) and (max-width: 1200px) {
+    .carousel{
+        display: none;
+    }
+    .left{
+        background: url("https://i2.wp.com/multarte.com.br/wp-content/uploads/2019/03/pokemon-png-logo.png?fit=2000%2C736&ssl=1") no-repeat;
+        background-size: 100% 50%;
+        background-position: center;
+
+        margin-right: 5%;
+    }
+
+    .right{
+        border-radius: 5px;
+    }
+    .right hr{
+        width: 0%;
+    }
+    .button{
+        margin-top: .8rem !important;
+    }
+    
+}
