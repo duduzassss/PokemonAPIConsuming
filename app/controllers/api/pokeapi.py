@@ -1,4 +1,4 @@
-import db 
+from app import db
 
 from url_api import url
 import requests, json
