@@ -10,13 +10,24 @@
 {% block content %}
 
 <div class="content-pokemons">
-    {% for pokemon in lista %}
-        <div class="container-pokemon">
-            <img src="{{ pokemon }}" width="150" alt="">
+    {% for dado in dados %}
+    <div class="container-pokemon">
+        <img src="{{ dado['img'] }}" width="150" alt="">
 
-            <h6>Lorem Ipsum</h6>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-        </div>
+            <h6>{{ dado["name"] }}</h6>
+            
+    </div>
     {% endfor %}
+    
+    <!-- <div class="icon">
+        <img src="../../static/icons/arrow-down-circle.svg" alt="" width="32" height="32" title="rolar">
+    </div> -->
+    
 </div>
+
+
+
+
+
+
 {% endblock %}

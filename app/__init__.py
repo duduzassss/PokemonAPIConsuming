@@ -24,3 +24,4 @@ from app.models import models
 from app.controllers.home import routes
 from app.controllers.auth import routes, forms
 from app.controllers.pokemons import routes
+

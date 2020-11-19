@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 
 import requests, json
+from random import randint
 
 from app import app
 
@@ -9,25 +10,21 @@ from app import app
 @app.route('/pokemons')
 def pokemons():
     try:
-        requisicao = requests.get("https://pokeapi.co/api/v2/pokemon?limit=6")
-        resposta = json.loads(requisicao.text)
-        pokemons  = resposta["results"]
-        
-        lista = []
-        for pokemon in pokemons:
-            for i in pokemon:
-                ...
-                # print(type(pokemon[i]))
-            # print(pokemon[i])
+        lista_nome = []
+        lista_url = []
+        for j in range(0,6):
+            requisicao = requests.get("https://pokeapi.co/api/v2/pokemon?limit=7") #1050
+            resposta = json.loads(requisicao.text) # Transform in dict iterable
+            pokemon  = resposta["results"]
             
-            url_pokemon = requests.get(pokemon[i])
-            resp = json.loads(url_pokemon.text)
-            resp2 = resp["sprites"]["other"]["official-artwork"]["front_default"]
-            # print(resp2)
-            lista.append(resp2)
-            print(lista)
-            
-        # return '200'
-        return render_template('pokemons/pokemons.html', lista = lista)
+        dados = []
+        for p in pokemon:
+            req = requests.get(p["url"])
+            res = json.loads(req.text)
+            poke = res["sprites"]["other"]["official-artwork"]["front_default"]
+            dicio = {"name": p["name"], "img": poke}
+            dados.append(dicio)
+             
+        return render_template('pokemons/pokemons.html', dados = dados) #lista_image = lista_image, lista_nome = lista_nome
     except:
         return 'Error'

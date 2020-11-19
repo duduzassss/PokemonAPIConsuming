@@ -35,3 +35,10 @@ class Pokedex(db.Model):
     
     id = db.Column(db.Integer, primary_key=True)
     id_user = db.Column(db.Integer, db.ForeignKey('users.id'))
+    
+class ImagePokemon(db.Model):
+    __tablename__ = 'images-pokemons'
+    
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String, unique=True)
+    link_img = db.Column(db.String, unique=True)
