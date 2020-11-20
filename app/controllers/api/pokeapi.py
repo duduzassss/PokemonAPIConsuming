@@ -1,7 +1,7 @@
-from app import db
-
 from url_api import url
 import requests, json
+
+from app import db
 
 def acess_api(url):
     requisicao = requests.get(url)

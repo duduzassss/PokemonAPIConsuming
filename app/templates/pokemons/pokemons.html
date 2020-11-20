@@ -10,9 +10,9 @@
 {% block content %}
 
 <div class="content-pokemons">
-    {% for dado in dados %}
+    {% for dado in send_pokemons %}
     <div class="container-pokemon">
-        <img src="{{ dado['img'] }}" width="150" alt="">
+        <img src='{{ dado["link_img"] }}' width="150" alt="">
 
             <h6>{{ dado["name"] }}</h6>
             
