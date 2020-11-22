@@ -1,0 +1,81 @@
+main{
+    border: 0;
+    width: 100%;
+    /* height: 70%; */
+    /* background-color: darkseagreen; */
+}
+h1{
+    font-weight: 300;
+}
+h1 span{
+    color: #616161;
+    font-size: 1.5rem;
+}
+.content-pokemon{
+    /* background-color: darkviolet; */
+    width: 60%;
+    border-radius: 150px;
+    border: 1px solid #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.content-pokemon img{
+    
+    
+}
+
+
+.specifications{
+    /* background-color:#FF1A1A; */
+    /* color: #fff; */
+    width: 25%;
+    height: 100%;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+.height, .weight, .candy {
+    /* background-color: fuchsia; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #212121;
+}
+.height p:first-child, .weight p:first-child, .candy p:first-child, .type p:first-child, .weaknesses p:first-child{
+    color: #fff;
+    font-weight: 500;
+    line-height: 0.8;
+}
+
+.type-weak{
+    display: flex !important;
+    flex-direction: column !important;
+    /* background-color: maroon; */
+    width: 30%;
+    height: 100%;
+    padding-top: 1rem;
+}
+.type, .weaknesses{
+    /* background-color: indigo; */
+    height: 50%;
+    width: 100%;
+}
+.type div, .weaknesses div{
+    display: inline-block !important;
+    text-align: center;
+}
+.type p:first-child, .weaknesses p:first-child{
+    width: 100%;
+}
+
+.weaknesses{
+    /* background-color: lawngreen; */
+    
+}
+

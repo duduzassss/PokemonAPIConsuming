@@ -4,24 +4,37 @@
 
 {% block head %}
     {{ super() }}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/pokemons/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pokemons/pokemons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pokemons/color-types.css') }}">
 {% endblock %}
 
 {% block content %}
 
 <div class="content-pokemons">
-    {% for dado in send_pokemons %}
+    {% for dado in lista_pokemons %}
     <div class="container-pokemon">
-        <img src='{{ dado["link_img"] }}' width="150" alt="">
+    
+        <a href='/pokemon/{{ dado["name"].lower() }}'>
+            <img src='{{ dado["img"] }}' width="140" height="140" alt="">
+        </a>
+
+        <h3>Nº{{ dado["num"] }}</h3>
+       
 
             <h6>{{ dado["name"] }}</h6>
+
+            <div class="types">
+                {% for type in dado["type"] %}
+                    <div class="{{type.lower()}}">
+                        {{type}}
+                    </div>
+                {% endfor %}
+            </div>
+            
             
     </div>
     {% endfor %}
-    
-    <!-- <div class="icon">
-        <img src="../../static/icons/arrow-down-circle.svg" alt="" width="32" height="32" title="rolar">
-    </div> -->
+  
     
 </div>
 

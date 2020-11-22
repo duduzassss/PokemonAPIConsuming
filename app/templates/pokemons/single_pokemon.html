@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ super() }}- NOME DO POKEMON {% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pokemons/pokemon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pokemons/color-types.css') }}">
+{% endblock %}
+
+{% block content %}
+
+{% for pokemon in lista %}
+<h1>{{ pokemon["name"] }} <span>Nº{{pokemon["num"]}}</span></h1>
+
+<div class="content-pokemon">
+    <img src="{{ pokemon['img'] }}" width="190" alt="">
+
+    <div class="specifications">
+        <div class="height">
+            <p>Height</p>
+            <p>{{ pokemon["height"] }}</p>
+        </div>
+
+        <div class="weight">
+            <p>Weight</p>
+            <p>{{ pokemon["weight"] }}</p>
+        </div>
+
+        <div class="candy">
+            <p>Candy</p>
+            <p>{{ pokemon["candy"] }}</p>
+        </div>
+
+    </div>
+    
+    <div class="type-weak">
+       <div class="type">
+            <p>Type</p>
+
+            {% for type in pokemon["type"] %}
+            <div class="{{ type.lower() }}">
+                {{ type }}
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="weaknesses">
+            <p>Weaknesses</p>
+            {% for weak in pokemon["weaknesses"] %}
+            <div class="{{ weak.lower() }}">
+                {{ weak }}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

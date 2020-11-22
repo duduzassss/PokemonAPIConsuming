@@ -46,10 +46,10 @@ header{
     justify-content: flex-end;
     align-items: flex-end;
 }
-.signup{
+.signup, .pokemons-link{
     margin-right: 2.6rem;
 }
-.signup a, .signin a{
+.signup a, .signin a, .pokemons-link a{
     text-decoration: none !important;
     color: #fff !important;
     font-size: 1.4rem !important;

@@ -14,13 +14,15 @@ main{
     
     overflow-y: scroll;    
     min-height: 400px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 ::-webkit-scrollbar {
     display: none;
 }
 
 .container-pokemon{
-    background-color: #F0F1EC;
+    background-color: #e5dede;
     margin-right: 2rem;
     margin-bottom: 2rem;
     border-radius: 8px;
@@ -30,13 +32,35 @@ main{
     justify-content: center;
     flex-direction: column;
 
-    
+    /* for animation transition */
+    transition: transform .2s ease-in-out;
+
+    /*  */
 }
 
+
+.container-pokemon h3{
+    font-size: .9rem;
+    font-weight: 500;
+    color: #919191;
+    align-items: flex-start;
+    width: 100%;
+    text-indent: .8rem;
+}
 .container-pokemon h6{
     font-size: 1.4rem;
     font-weight: 300;
     text-transform: capitalize;
+    width: 100%;
+    text-indent: .8rem;
+}
+
+
+
+/* Animations */
+.container-pokemon:hover {
+    transform: translateY(-10px);
     
 }
 
+/* /Animations */
