@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from flask_login import login_required
 
 import requests, json
 from random import randint
@@ -6,9 +7,6 @@ from random import randint
 from app import app, db
 from app.models.models import ImagePokemon
 
-from string import Template # importação do join
-from sqlalchemy import text
-import time
 
 
 def conectAPI():
@@ -18,6 +16,7 @@ def conectAPI():
     return resposta
 
 @app.route('/pokemons')
+@login_required
 def pokemons():
     resposta = conectAPI()
     pokemons  = resposta["pokemon"]
@@ -31,6 +30,7 @@ def pokemons():
     return render_template('pokemons/pokemons.html', lista_pokemons = lista_pokemons) #send_pokemons = send_pokemons
 
 @app.route('/pokemon/<name>')
+@login_required
 def pokemon(name):
     resposta = conectAPI()
     pokemons = resposta["pokemon"]
