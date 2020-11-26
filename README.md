@@ -1,5 +1,5 @@
 #                         PokeAPI
-## PokeAPI is a web app for the purpose of learning MVC project architecture, and also for API consumption, in this I use the Pokemon API from https://pokeapi.co/
+## PokeAPI is a web app for the purpose of learning MVC project architecture, and also for API consumption, in this I use the Pokemon API from https://www.canalti.com.br/api/pokemons.json
 
 ## PokeAPI is being developed using the following technologies:
 
